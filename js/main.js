@@ -1,26 +1,28 @@
    // Initialize Firebase
- var config = {
-    apiKey: "AIzaSyDsltjoopDKJ4kGUUFkvVVvwkwVV62_ugM",
-    authDomain: "reservation-site-4cb62.firebaseapp.com",
-    databaseURL: "https://reservation-site-4cb62.firebaseio.com",
-    storageBucket: "reservation-site-4cb62.appspot.com",
-    messagingSenderId: "421936455026"
-  };
-  firebase.initializeApp(config);
+var config = {
+  apiKey: "AIzaSyDsltjoopDKJ4kGUUFkvVVvwkwVV62_ugM",
+  authDomain: "reservation-site-4cb62.firebaseapp.com",
+  databaseURL: "https://reservation-site-4cb62.firebaseio.com",
+  storageBucket: "reservation-site-4cb62.appspot.com",
+  messagingSenderId: "421936455026"
+};
 
-  var database = firebase.database();
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
 
 
 // SUBMIT //
 $('#reservation-form').on('submit', function(e){
 
-    e.preventDefault();
+  e.preventDefault();
 
-    var userInput = {
-      qty: $('#qty-field').val(), 
-      name: $('#name-field').val(),
-      date: $('#datepicker').val()
-    };
+  var userInput = {
+    qty: $('#qty-field').val(), 
+    name: $('#name-field').val(),
+    date: $('#datepicker').val()
+  };
     
 	
 	var reservationResult = database.ref('reservations');
@@ -28,8 +30,10 @@ $('#reservation-form').on('submit', function(e){
 		reservation: userInput,
 		});
 	
-    $('#reservation-form')[0].reset();
+  $('#reservation-form')[0].reset();
+
 });
+
 
 
 // GET RESERVATIONS //
@@ -52,11 +56,11 @@ database.ref('reservations').on('child_added', function (snapshot) {
       $('.form-result').append(reservationListElement);
 	
 	});
-
-  
-	}
+}
 	
-	getReservations();
+getReservations();
+
+
 
 // MAP //
 function initMap() {
@@ -71,10 +75,10 @@ function initMap() {
 	});
 }
 
-// DATE PICKER //
-  $( function() {
-    $( "#datepicker" ).datepicker({ dateFormat: 'mm/dd' }).val();
-  } );
 
-  console.log('working');
+
+// DATE PICKER //
+$( function() {
+  $( "#datepicker" ).datepicker({ dateFormat: 'mm/dd' }).val();
+});
 

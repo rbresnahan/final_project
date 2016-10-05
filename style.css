@@ -63,6 +63,7 @@ header{}
 /* MAKE RESERVATION */
 #reservation{width:400px; height:100px; background-color: #340509; color:#cf680b; border-bottom: 1px solid #cf680b;}
 #reservation h3{font-weight: normal;padding-top:20px;padding-left: 20px;}
+  
   #qty-field{width:25px; background-color: #fff; }
 
   form{margin-top:10px; padding-left:20px;}

@@ -33,7 +33,7 @@
 						<input type="text" id="qty-field" class="field" placeholder="Qty">
 						<input type="text" id="name-field" class="field" placeholder="Name">
 						<input type="text" id="datepicker" placeholder="Date">
-						<input type="submit" value="Submit">
+						<input type="submit" value="Reserve">
 					</form>
 
 				</div>
@@ -87,7 +87,7 @@
 				<ul class="block-text form-result">
 	
 					<script id="reservation-template" type="text/x-handlebars-template">
-	   				<li data-id="{{reservationId}}" class="reservation">{{date}} - {{name}} Party of {{qty}}</li>
+	   				<li data-id="{{reservationId}}" class="reservation">{{date}} - {{name}}, Table of {{qty}}</li>
 	   				</script>
 
 				</ul>

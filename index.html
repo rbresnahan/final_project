@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gilt Bar Reservations</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://www.gstatic.com/firebasejs/3.0.5/firebase.js"></script>
+	<script src="js/jquery-3.0.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/handlebars-v4.0.5.js"></script>
+
+</head>
+
+<body>
+
+<div id="footer"><img src="images/gilt-logo.png"></div>
+
+<img id="background-image" class="full-width-background" src="images/background-image_1100.png">
+
+<div id="wrapper">
+
+	<div id="container">
+
+		<!--  // LEFT REGION // -->
+		<div id="left-region">
+
+			<div class="content-block">
+				<div id="reservation">
+			
+					<h3>Make Reservation</h3>
+
+					<form id="reservation-form">
+						<input type="text" id="qty-field" class="field" placeholder="Qty">
+						<input type="text" id="name-field" class="field" placeholder="Name">
+						<input type="text" id="datepicker" placeholder="Date">
+						<input type="submit" value="Submit">
+					</form>
+
+				</div>
+			</div>
+
+		<!-- LEFT BLOCK -->
+		<div class="content-block bottom-row">
+		
+			<div id="hours" class="border">
+			
+				<h3 class="block-header">Hours of Operation</h3>
+				
+				<p class="block-text">
+					Monday: 4:45pm - 11:30pm<br>
+					Tuesday: 4:45pm - 11:30pm<br>
+					Wednesday: 4:45pm - 11:30pm<br>
+					Thursday: 4:45pm - 11:30pm<br>
+					Friday: 4:45pm - 12:30am<br>
+					Saturday: 4:45pm - 12:30am<br>
+					Sunday: 4:45pm - 10:30pm
+				</p>
+
+			</div>
+
+			<div id="location" class="border">
+		
+				<h3 class="block-header">Location</h3>
+		
+				<p class="block-text">
+					230 W Kinzie St<br>
+					Chicago, IL 60654<br> 
+					312.464.9544
+				</p>
+		
+			</div>
+
+		</div><!-- end left block -->
+
+		</div> <!-- // end left region // -->
+
+
+	<!-- // RIGHT REGION // -->
+		<div id="right-region">
+
+		<div class="content-block">
+		
+			<div id="submited-reservation" class="border">
+
+				<h3 class="block-header">Confirmed Reservations</h3>
+
+				<ul class="block-text form-result">
+	
+					<script id="reservation-template" type="text/x-handlebars-template">
+	   				<li data-id="{{reservationId}}" class="reservation">{{date}} - {{name}} Party of {{qty}}</li>
+	   				</script>
+
+				</ul>
+
+			</div><!-- endsubmited-reservation -->
+
+			<div id="map-container">
+
+				<!-- GOOGLE MAPS API -->
+				<div id="map"></div>
+
+<!-- javaScript --><script src="js/main.js"></script>
+				
+				<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ5je93gccbAt3xuCYyMRFq2P9t8lIqQA&callback=initMap" type="text/javascript">
+				</script>
+		
+				</div><!-- end map-container -->
+
+			</div><!-- end content-block -->
+
+		</div> <!-- // end right regions // -->
+
+	</div><!-- end container -->
+
+</div>
+
+</body>
+
+</html>

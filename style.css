@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{font-family: "arial", san-serif; font-size:12px;}
+
+li{list-style: none;}
+
+.full-width-background {
+  background-image: url("background-image_1100.png");
+  overflow:hidden;
+  width: 100%;
+  min-height:100%;
+  height: auto;
+  background-repeat: no-repeat;
+  z-index: -9999999; 
+  position:fixed;
+}
+
+header{}
+
+#wrapper {
+  width:100%;
+  height:100%;
+  margin:auto;
+  overflow: hidden;
+}
+
+#container {
+  width:980px;
+  height:100%;
+  margin:auto;
+  margin-top:10%;
+  overflow: hidden;
+}
+
+#left-region{width:auto; float:left; clear:right;}
+#right-region{float:left;}
+
+
+.content-block{
+  width:100%;
+  overflow:hidden;
+}
+
+.block-header{
+  font-weight: normal;
+  padding-top:20px;
+  padding-left: 20px;
+  color:#cf680b;
+}
+
+.block-text{
+  margin-left:20px;
+  padding-top:10px;
+  padding-bottom:20px;
+  line-height: 1.7em;
+}
+
+.bottom-row{margin-top:10px;}
+
+/* MAKE RESERVATION */
+#reservation{width:400px; height:100px; background-color: #340509; color:#cf680b; border-bottom: 1px solid #cf680b;}
+#reservation h3{font-weight: normal;padding-top:20px;padding-left: 20px;}
+  #qty-field{width:25px; background-color: #fff; }
+
+  form{margin-top:10px; padding-left:20px;}
+
+  button{width:15%;}
+
+  #datepicker{width:75px;}
+  #date{width:75px;}
+  #ui-datepicker-div{background-color: #fff;}
+
+.border{border-bottom:10px solid #340509;}
+
+/* HOURS */
+#hours{
+  width:250px; 
+  height:auto;
+  background-color:#fff;
+  float:left;
+  clear:right;
+  opacity: .7;
+  font-size:1em;
+}
+
+
+/* LOCATION */
+#location{
+  width:140px;
+  float:left;
+  height:auto;
+  background-color:#fff;
+  opacity: .7;
+  margin-left: 10px;
+  font-size:1em;
+}
+
+
+#submited-reservation{
+  float:left;
+  clear:right;
+  width:250px;
+  height:auto;
+  min-height:100px;
+  background-color:#fff;
+  opacity:.7;
+  font-size:1em;
+  margin-left:10px;
+}
+  
+
+#map-container{
+  margin-left: 10px; 
+  width:300px; 
+  background-color: #fff;  
+  float:left;
+  height:auto;
+ }
+
+#map {
+  margin:auto;
+  width:100%;
+  height:300px;
+}
+
+
+#footer { 
+  bottom:0%;
+  position: fixed;
+  z-index:99;
+  width:100%;
+  height:75px;
+  color:#fff;
+  text-align:center;
+  background-color:black;
+
+}
+
+#footer img{
+  float:left;
+  width:10%;
+  margin-top:.7em;
+  margin-left:1em;
+}
+
+
+
+@media (max-width: 1100px) {
+.full-width-background {
+  width: auto;
+  height: 100%;
+  min-height:100%;
+}
+
+}
